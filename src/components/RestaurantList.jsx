@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-const RestaurantList = () => {
+const RestaurantList = ({loadRestaurants}) => {
+  useEffect(() => {
+    loadRestaurants();
+  }, [loadRestaurants]);
+
   return <div>RestaurantList</div>;
 };
 
